@@ -28987,25 +28987,7 @@ var Geolocation = function (_React$Component) {
   _createClass(Geolocation, [{
     key: 'render',
     value: function render() {
-      return !this.props.isGeolocationAvailable ? _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'h3',
-          null,
-          'Your browser does not support Geolocation'
-        ),
-        _react2.default.createElement(_WeatherWidget2.default, { geolocation: this.props.isGeolocationEnabled })
-      ) : !this.props.isGeolocationEnabled ? _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(
-          'h3',
-          null,
-          'Geolocation is not enabled'
-        ),
-        _react2.default.createElement(_WeatherWidget2.default, { geolocation: this.props.isGeolocationEnabled })
-      ) : this.props.coords ? _react2.default.createElement(_WeatherWidget2.default, { latitude: this.props.coords.latitude, longitude: this.props.coords.longitude, geolocation: this.props.coords }) : _react2.default.createElement(
+      return !this.props.isGeolocationAvailable ? _react2.default.createElement(_WeatherWidget2.default, { geolocation: this.props.isGeolocationEnabled }) : !this.props.isGeolocationEnabled ? _react2.default.createElement(_WeatherWidget2.default, { geolocation: this.props.isGeolocationEnabled }) : this.props.coords ? _react2.default.createElement(_WeatherWidget2.default, { latitude: this.props.coords.latitude, longitude: this.props.coords.longitude, geolocation: this.props.coords }) : _react2.default.createElement(
         'div',
         null,
         'Getting the location data\u2026 '
