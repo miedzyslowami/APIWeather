@@ -14,7 +14,6 @@ class DegreeBox extends React.Component {
             &deg;C</p>
         </div>
         <img src={`https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/${this.props.icon}.png`} aria-label="hidden"/></div>
-
     </div>)
   }
 }
