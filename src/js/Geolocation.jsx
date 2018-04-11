@@ -1,29 +1,29 @@
 import React from 'react';
-import WeatherWidget from './WeatherWidget.jsx';
 import {geolocated} from 'react-geolocated';
-import scss from '../scss/loader.scss';
 
-class Geolocation extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
+class Demo extends React.Component {
   render() {
-    return this.props.isGeolocationEnabled
-      ? this.props.coords
-        ? <WeatherWidget geolocation={true} latitude={this.props.coords.latitude} longitude={this.props.coords.longitude}/>
-        : <div className={scss.loader}>
-            <div className={scss.loader__icon}/>
-            Getting the location data&hellip;
-          </div>
-      : <WeatherWidget geolocation={false} latitude='' longitude=''/>;
+    return !this.props.isGeolocationAvailable
+      ? <div>Your browser does not support Geolocation</div>
+      : !this.props.isGeolocationEnabled
+        ? <div>Geolocation is not enabled</div>
+        : this.props.coords
+          ? <table>
+            <tbody>
+              <tr><td>latitude</td><td>{this.props.coords.latitude}</td></tr>
+              <tr><td>longitude</td><td>{this.props.coords.longitude}</td></tr>
+              <tr><td>altitude</td><td>{this.props.coords.altitude}</td></tr>
+              <tr><td>heading</td><td>{this.props.coords.heading}</td></tr>
+              <tr><td>speed</td><td>{this.props.coords.speed}</td></tr>
+            </tbody>
+          </table>
+          : <div>Getting the location data&hellip; </div>;
   }
 }
 
 export default geolocated({
   positionOptions: {
     enableHighAccuracy: false,
-    timeout: Infinity
   },
-  userDecisionTimeout: 5000
-})(Geolocation);
+  userDecisionTimeout: 5000,
+})(Demo);
