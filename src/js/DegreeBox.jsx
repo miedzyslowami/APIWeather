@@ -13,7 +13,7 @@ class DegreeBox extends React.Component {
           <p>{this.props.temperature}
             &deg;C</p>
         </div>
-        <img src={`//openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/${this.props.icon}.png`} aria-label="hidden"/></div>
+        <img src={`https://openweathermap.org/themes/openweathermap/assets/vendor/owm/img/widgets/${this.props.icon}.png`} aria-label="hidden"/></div>
 
     </div>)
   }

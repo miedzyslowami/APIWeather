@@ -5,9 +5,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: {
-    app: 'babel-polyfill','./src/js/index.jsx'
-  },
+  entry: './src/js/index.jsx',
   devtool: 'source-map',
   output: {
     filename: '[name].bundle.js',
