@@ -1,0 +1,46 @@
+@import 'variables';
+
+.degree__box {
+  color: $mainFontColor;
+  background-color: $mainBgColor;
+  border-radius: 10px;
+
+  .degree__box__header {
+    padding: 20px;
+    text-align: center;
+    background-color: $locationBgColor;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .weather {
+    .degree__value,
+    img {
+      width: 55%;
+      box-sizing: border-box;
+      height: 110px;
+    }
+
+    .degree__value {
+      float: left;
+      display: grid;
+
+      & > p {
+        justify-self: center;
+        align-self: center;
+        font-size: 33px;
+        text-align: right;
+      }
+    }
+
+    img {
+      float: right;
+      width: 110px;
+    }
+
+    &:after {
+      clear: both;
+      content: "";
+      display: block;
+    }
+  }
+}
