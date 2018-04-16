@@ -1,4 +1,4 @@
-# Project name: APIWeather :baby:
+# Project name: APIWeather :umbrella:
 
 TECHNOLOGIES: HTML5, CSS, SASS, REACT, RWD, API, GULP, WEBPACK, ES6, ES7, JSX
 
